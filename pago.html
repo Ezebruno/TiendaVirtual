@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pago</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+    <header>
+        <h1>Confirma tu Compra</h1>
+    </header>
+    <main>
+        <!-- Detalles del producto -->
+        <section>
+            <h2>Detalles del Producto</h2>
+            <p id="detalle-producto"></p>
+            <p id="detalle-precio"></p>
+        </section>
+
+        <!-- Selección del método de pago -->
+        <section>
+            <h2>Selecciona tu Método de Pago</h2>
+            <select id="metodo-pago">
+                <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+                <option value="Tarjeta de Débito">Tarjeta de Débito</option>
+                <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+            </select>
+        </section>
+
+        <!-- Botón para confirmar -->
+        <button id="btn-confirmar">Confirmar Pago</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tienda Canina</p>
+    </footer>
+
+    <script>
+        // Recuperar parámetros de la URL
+        const params = new URLSearchParams(window.location.search);
+        const producto = params.get('producto');
+        const precio = params.get('precio');
+
+        // Mostrar detalles del producto
+        document.getElementById('detalle-producto').textContent = `Producto: ${producto}`;
+        document.getElementById('detalle-precio').textContent = `Precio: $${precio}`;
+
+        // Botón para continuar
+        document.getElementById('btn-confirmar').addEventListener('click', () => {
+            const metodoPago = document.getElementById('metodo-pago').value;
+
+            // Redirigir a la página de datos del comprador
+            window.location.href = `datos-comprador.html?producto=${producto}&precio=${precio}&metodo=${metodoPago}`;
+        });
+    </script>
+</body>
+</html>

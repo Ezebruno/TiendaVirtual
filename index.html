@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Artículos para Perros</title>
+    <link rel="stylesheet" href="diseño.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Tienda Canina</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h2>Todo lo que tu perro necesita, en un solo lugar.</h2>
+    </section>
+
+    <section id="productos" class="productos">
+        <h2>Productos Destacados</h2>
+         
+        <!--<img src="Img/fondo.avif" alt="Perro" class="imagen-fondo">-->
+        <div class="product">
+            <button onclick="window.location.href='#collares'">Collares</button>
+            <button onclick="window.location.href='#comida'">Comida</button>
+            <button onclick="window.location.href='#juguetes'">Juguetes</button>
+            <button onclick="window.location.href='#correas'">Correas</button>
+            <button onclick="window.location.href='#camas'">Camas</button>
+            <button onclick="window.location.href='#casas'">Casas</button>
+        </div>
+
+        <!-- Categoría: Collares -->
+        <h3 id="collares">Collares</h3>
+        <div>
+            <input type="text" id="buscador-collar" placeholder="Buscar collar..." onkeyup="buscarProductosCategoria('collar')">
+
+        </div>
+        <div id="mensaje-collar" style="display:none;">No se encontraron productos</div>
+        <div class="productos-grid" id="productos-collar">
+            <div class="producto" data-nombre="collar para perro">
+                <img src="Img/collar0.webp" alt="Collar para perro">
+                <h2>Collar Resistente</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Collar Resistente', 1)">Comprar</button>
+            </div>
+            <div class="producto" data-nombre="collar para perro">
+                <img src="Img/collar1.webp" alt="Collar para perro">
+                <h2>Collar de Cadena</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Collar de Cadena', 1)">Comprar</button>
+            </div>
+            <div class="producto" data-nombre="collar para perro">
+                <img src="Img/collar2.webp" alt="Collar para perro">
+                <h2>Collar Regulable</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Collar Regulable', 1)">Comprar</button>
+            </div>
+        </div>
+
+        <!-- Categoría: Comida -->
+        <h3 id="comida">Comida</h3>
+        <div>
+            <input type="text" id="buscador-comida" placeholder="Buscar comida..." onkeyup="buscarProductosCategoria('comida')">
+
+        </div>
+        <div id="mensaje-comida" style="display:none;">No se encontraron productos</div>
+        <div class="productos-grid" id="productos-comida">
+            <div class="producto" data-nombre="comida para perros">
+                <img src="Img/comida0.webp" alt="Comida premium para perros">
+                <h2>Royal Canin</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Royal Canin', 1)">Comprar</button>
+            </div>
+            <div class="producto" data-nombre="comida para perros">
+                <img src="Img/comida1.webp" alt="Comida premium para perros">
+                <h2>Pedigree</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Pedigree', 1)">Comprar</button>
+            </div>
+            <div class="producto" data-nombre="comida para perros">
+                <img src="Img/comida2.webp" alt="Comida premium para perros">
+                <h2>Nutribon</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Nutribon', 1)">Comprar</button>
+            </div>
+        </div>
+
+        <!-- Categoría: Juguetes -->
+        <h3 id="juguetes">Juguetes</h3>
+        <div>
+            <input type="text" id="buscador-juguete" placeholder="Buscar juguete..." onkeyup="buscarProductosCategoria('juguete')">
+
+        </div>
+        <div id="mensaje-juguete" style="display:none;">No se encontraron productos</div>
+        <div class="productos-grid" id="productos-juguete">
+            <div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/jugete0.webp" alt="Juguete interactivo">
+                <h2>Soga</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Soga', 1)">Comprar</button>
+            </div>
+            <div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/jugete1.webp" alt="Juguete interactivo">
+                <h2>Gallina</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Gallina', 1)">Comprar</button>
+            </div><div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/jugete2.webp" alt="Juguete interactivo">
+                <h2>Pelota</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Pelota', 1)">Comprar</button>
+            </div>
+        </div>
+        <!-- Categoria correas-->
+        <h3 id="correas">Correas</h3>
+        <div>
+            <input type="text" id="buscador-juguete" placeholder="Buscar juguete..." onkeyup="buscarProductosCategoria('juguete')">
+
+        </div>
+        <div id="mensaje-juguete" style="display:none;">No se encontraron productos</div>
+        <div class="productos-grid" id="productos-juguete">
+            <div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/correa0.webp" alt="Juguete interactivo">
+                <h2>Correa de Cadena</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Correa de Cadena', 1)">Comprar</button>
+            </div>
+            <div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/correa1.webp" alt="Juguete interactivo">
+                <h2>Correa Retráctil</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Correa Retráctil', 1)">Comprar</button>
+            </div><div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/correa2.webp" alt="Juguete interactivo">
+                <h2>Correa Reforzada</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Correa Reforzada', 1)">Comprar</button>
+            </div>
+        </div>
+        <!-- Categoria camas-->
+        <h3 id="camas">Camas</h3>
+        <div>
+            <input type="text" id="buscador-juguete" placeholder="Buscar juguete..." onkeyup="buscarProductosCategoria('juguete')">
+        </div>
+        <div id="mensaje-juguete" style="display:none;">No se encontraron productos</div>
+        <div class="productos-grid" id="productos-juguete">
+            <div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/cama0.webp" alt="Juguete interactivo">
+                <h2>Cama para Perro Mediano</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Cama para Perro Mediano', 1)">Comprar</button>
+            </div>
+            <div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/cama1.webp" alt="Juguete interactivo">
+                <h2>Cama para Perro Grande</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Cama para Perro Grande', 1)">Comprar</button>
+            </div><div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/cama2.webp" alt="Juguete interactivo">
+                <h2>Cama para Perro Chico</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Cama para Perro Chico', 1)">Comprar</button>
+            </div>
+        </div>
+        <!-- Categoria casas-->
+        <h3 id="casas">Casas</h3>
+        <div>
+            <input type="text" id="buscador-juguete" placeholder="Buscar juguete..." onkeyup="buscarProductosCategoria('juguete')">
+            <!--<button onclick="buscarProductosCategoria('juguete')">🔍</button>-->
+        </div>
+        <div id="mensaje-juguete" style="display:none;">No se encontraron productos</div>
+        <div class="productos-grid" id="productos-juguete">
+            <div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/casa0.webp" alt="Juguete interactivo">
+                <h2>Casa Lavable</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Casa Lavable', 1)">Comprar</button>
+            </div>
+            <div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/casa1.webp" alt="Juguete interactivo">
+                <h2>Casa Antimordidas</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Casa Antimordidas', 1)">Comprar</button>
+            </div><div class="producto" data-nombre="juguete interactivo">
+                <img src="Img/Casa2.webp" alt="Juguete interactivo">
+                <h2>Casa de Plastico</h2>
+                <p>Precio: $1</p>
+                <button onclick="irAPago('Casa de Plastico', 1)">Comprar</button>
+            </div>
+        </div>
+        <!-- Agrega más categorías como correa, cama, casa, etc. -->
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tienda Canina. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

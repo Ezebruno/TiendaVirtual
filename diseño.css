@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    padding-top: 80px; /* Más espacio para el header */
+}
+
+.product{
+    background-color: #cfcfcf;
+}
+
+h3{
+    background-color: #cfcfcf;
+}
+
+.imagen-fondo {
+    max-width: 100%; /* Hace que la imagen no sea más ancha que su contenedor */
+    max-height: 500px; /* Limita la altura de la imagen */
+    width: auto; /* Ajusta automáticamente el ancho según la altura */
+    height: auto; /* Mantiene la proporción original */
+    object-fit: cover; /* Hace que la imagen cubra el contenedor sin distorsionarse */
+    display: block; /* Elimina el espacio en la parte inferior que algunas imágenes tienen por defecto */
+    margin: 0 auto; /* Centra la imagen si el contenedor tiene un tamaño mayor */
+}
+
+
+header {
+    background-color: #54d2fc;
+    color: #ffffff;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fija el header */
+    top: 0;
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    z-index: 1000; /* Hace que el header esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow-x: hidden; /* Evita que se muestre scroll horizontal innecesario */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden si no caben */
+}
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Permite que los enlaces bajen si es necesario */
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    white-space: nowrap; /* Evita que los enlaces se corten */
+    padding: 5px 10px;
+}
+
+.hero {
+    text-align: center;
+    padding: 30px;
+    background-color: #cfcfcf;
+}
+
+.hero input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin-top: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.productos {
+    padding: 20px;
+}
+
+.productos-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.producto {
+    border: 5px solid #cfcfcf;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.contacto {
+    padding: 5px;
+    background-color: #cfcfcf;
+}
+
+.contacto form {
+    max-width: 500px;
+    margin: 10px;;
+    display:contents;
+    flex-direction:column;
+    gap: 3px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #54d2fc;
+    color: #fff;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Comprador</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+    <header>
+        <h1>Completa tus Datos</h1>
+    </header>
+    <main>
+        <!-- Detalles del producto -->
+        <section>
+            <h2>Resumen de Compra</h2>
+            <p id="detalle-producto"></p>
+            <p id="detalle-precio"></p>
+            <p id="detalle-metodo"></p>
+        </section>
+
+        <!-- Formulario de datos -->
+        <form id="form-compra">
+            <h2>Datos del Comprador</h2>
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <h2>Datos de la Tarjeta</h2>
+            <label for="tarjeta">Número de Tarjeta:</label>
+            <input type="text" id="tarjeta" name="tarjeta" maxlength="16" required>
+
+            <label for="fecha-expiracion">Fecha de Expiración:</label>
+            <input type="month" id="fecha-expiracion" name="fecha-expiracion" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" required>
+
+            <button type="submit">Finalizar Compra</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tienda Canina</p>
+    </footer>
+
+    <script>
+        // Recuperar datos de la URL
+        const params = new URLSearchParams(window.location.search);
+        const producto = params.get('producto');
+        const precio = params.get('precio');
+        const metodo = params.get('metodo');
+
+        // Mostrar detalles del producto y método de pago
+        document.getElementById('detalle-producto').textContent = `Producto: ${producto}`;
+        document.getElementById('detalle-precio').textContent = `Precio: $${precio}`;
+        document.getElementById('detalle-metodo').textContent = `Método de Pago: ${metodo}`;
+
+        // Manejar el envío del formulario
+        document.getElementById('form-compra').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            // Obtener los datos ingresados
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const tarjeta = document.getElementById('tarjeta').value;
+
+            // Enviar correo (usando servicio como EmailJS o backend)
+            alert(`Compra realizada por ${nombre}. Te llegará un correo a ${email}`);
+            
+            // Redirigir al cliente a la página de confirmación
+            window.location.href = "compra-confirmada.html";
+        });
+    </script>
+</body>
+</html>

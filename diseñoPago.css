@@ -1,0 +1,22 @@
+header{
+    text-align: center;
+    padding: 5px;
+    background-color: #54d2fc;
+    color: #fff;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #54d2fc;
+    color: #fff;
+}
+
+form{
+    background-color: #cfcfcf;
+    padding: 20px;
+}
+
+button{
+    padding: 2px;
+}
